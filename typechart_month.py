@@ -1,15 +1,15 @@
 """ Statistics delays of trains Thailand Project
-    This program shows chart of September month 2016 that show statistics average delays of trains Thailand divided by types
+    This program shows chart of September 2016 that show statistics average delays of Thai trains divided by types
 """
 import pygal
 def make_chart():
-    """This function use to make chart of September month 2016 that show statistics average delays
-    of trains Thailand divided by types"""
+    """This function use to make chart of September 2016 that show statistics average delays
+    of Thai trains divided by types"""
     from pygal.style import RotateStyle
     dark_rotate_style = RotateStyle('#9e6ffe')
     chart = pygal.StackedLine(fill=True, interpolate='cubic', style=dark_rotate_style)
-    line_chart = pygal.StackedLine(fill=True)
-    line_chart.title = 'Statistics average delays of trains Thailand divided by types of September month 2016'
+    chart.title = 'Statistics average delays of Thai trains divided by types of September 2016'
+    chart.x_labels = map(str, range(1, 31))
     chart.add('Special express trains', [164.00, 105.33, 102.00, 100.33, 94.00, 135.67, 102.33, 157.33, 109.67, 60.67, 125.00, 198.00,
         129.33, 280.00, 209.33, 116.67, 209.00, 126.33, 170.33, 238.00, 204.33, 146.67, 145.67, 226.33, 160.33, 122.33, 169.67,
         186.00, 120.33, 113.33])
